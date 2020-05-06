@@ -1,0 +1,18 @@
+<div class="p-grid ui-fluid">
+    <p-panel header="Total Cases" class="ui-g-12 ui-md-6">
+        <p-chart type="line" [data]="totalCase"></p-chart>
+    </p-panel>
+    
+    <p-panel header="New Cases" class="ui-g-12 ui-md-6">
+        <p-chart type="bar" [data]="newCases"></p-chart>
+    </p-panel>
+
+    <p-panel header="Total Deaths" class="ui-g-12 ui-md-6">
+        <p-chart type="line" [data]="totalDeaths"></p-chart>
+    </p-panel>
+
+    <p-panel header="New Deaths" class="ui-g-12 ui-md-6">
+        <p-chart type="bar" [data]="newDeaths"></p-chart>
+    </p-panel>
+        
+</div>

@@ -1,0 +1,24 @@
+<div *ngIf="lastDay" class="p-grid ui-fluid">
+
+    <div class="p-col-12 updated">
+        Updated on {{ lastDay.date }}
+    </div>
+    
+    <app-div-card label="Cases" value="{{ lastDay.totalCases }}" icon="pi pi-plus-circle" colour="#09791c9e"
+    class="ui-g-12 ui-md-6 ui-lg-3"></app-div-card>
+
+    <app-div-card label="New Cases" value="{{ lastDay.newCases }}" icon="pi pi-plus-circle" colour="#09791c9e"
+        class="ui-g-12 ui-md-6 ui-lg-3"></app-div-card>
+
+    <app-div-card label="Deaths" value="{{ lastDay.deaths }}" icon="pi pi-times" colour="#b90608"
+        class="ui-g-12 ui-md-6 ui-lg-3"></app-div-card>
+
+    <app-div-card label="New Deaths" value="{{ lastDay.newDeaths }}" icon="pi pi-times" colour="#b90608"
+        class="ui-g-12 ui-md-6 ui-lg-3"></app-div-card>
+
+    <div class="p-col-12">
+        <app-grafico [lastDay]="lastDay.date"></app-grafico>
+    </div>
+    
+
+</div>
