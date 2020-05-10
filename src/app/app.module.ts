@@ -8,10 +8,14 @@ import { AppComponent } from './app.component';
 import { DivCardComponent } from './div-card/div-card.component';
 import { DivSetorComponent } from './div-setor/div-setor.component';
 import { GraficoComponent } from './grafico/grafico.component';
+import { HeaderComponent } from './header/header.component';
 
 import { ChartModule } from 'primeng/chart';
 import { PanelModule } from 'primeng/panel';
-import { HeaderComponent } from './header/header.component';
+import { GMapModule } from 'primeng/gmap';
+import { MapsComponent } from './maps/maps.component';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
     DivCardComponent,
     DivSetorComponent,
     GraficoComponent,
-    HeaderComponent
+    HeaderComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,9 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     HttpClientModule,
     ChartModule,
-    PanelModule
+    PanelModule,
+    GMapModule,
+    ProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

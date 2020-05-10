@@ -24,7 +24,6 @@ export class GetDataService {
   }
   listToday(filtro: CasosDiarioFiltro) {
     const stringFiltro = this.setUrlfiltro(filtro);
-    console.log(this.API + stringFiltro);
     return this.httpClient.get<CasosDiario[]>(this.API + stringFiltro).pipe(take(1));
   }
 

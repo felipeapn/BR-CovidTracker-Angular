@@ -20,5 +20,11 @@
         <app-grafico [lastDay]="lastDay.date"></app-grafico>
     </div>
     
-
+    <div class="p-col-12" *ngIf="show; else loading">
+        <app-maps [mapData]="mapDataOverlay"></app-maps>
+    </div>
+    <ng-template #loading>
+        <p-progressSpinner [style]="{width: '150px', height: '150px'}" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
+    </ng-template>
+    
 </div>

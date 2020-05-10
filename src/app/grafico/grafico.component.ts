@@ -38,7 +38,7 @@ export class GraficoComponent implements OnInit {
     this.getDataService.listToday(this.filtro)
       .subscribe(
         res => this.formatDataSet(res), 
-        err => console.log("falhou")
+        err => console.log("Error" + err)
         );
   }
 
