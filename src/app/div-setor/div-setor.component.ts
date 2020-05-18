@@ -13,11 +13,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DivSetorComponent implements OnInit {
 
-  private $mapData: Observable<MapData[]>
-  private lastDay: CasosDiario;
+  $mapData: Observable<MapData[]>
+  lastDay: CasosDiario;
   
-  private mapDataOverlay: MapData[] = [];
-  private show: boolean = false;
+  mapDataOverlay: MapData[] = [];
+  show: boolean = false;
 
   constructor(
       private getDataService: GetDataService,

@@ -14,18 +14,18 @@ export class GraficoComponent implements OnInit {
 
   @Input() lastDay: string;
 
-  private filtro: CasosDiarioFiltro;
+  filtro: CasosDiarioFiltro;
 
-  private labels: string[] = [];
-  private totalCasesChartDataSet: any[] = [];
-  private newCasesChartDataSet: any[] = [];
-  private newDeathsChartDataSet: any[] = [];
-  private totalDeathsChartDataSet: any[] = [];
+  labels: string[] = [];
+  totalCasesChartDataSet: any[] = [];
+  newCasesChartDataSet: any[] = [];
+  newDeathsChartDataSet: any[] = [];
+  totalDeathsChartDataSet: any[] = [];
 
-  private totalDeaths: any;
-  private newDeaths: any;
-  private newCases: any;
-  private totalCase: any;
+  totalDeaths: any;
+  newDeaths: any;
+  newCases: any;
+  totalCase: any;
 
   constructor(private getDataService: GetDataService) {}
 
@@ -48,7 +48,7 @@ export class GraficoComponent implements OnInit {
       datasets: [
         {
           label: 'New Cases',
-          backgroundColor: '#42A5F5',
+          backgroundColor: '#09791c9e',
           borderColor: '#1E88E5',
           fill: false,
           data: this.newCasesChartDataSet
@@ -78,8 +78,8 @@ export class GraficoComponent implements OnInit {
       datasets: [
         {
           label: 'Total Cases',
-          backgroundColor: '#42A5F5',
-          borderColor: '#1E88E5',
+          backgroundColor: '#09791c9e',
+          borderColor: '#09791c9e',
           fill: false,
           data: this.totalCasesChartDataSet
         },
@@ -93,7 +93,7 @@ export class GraficoComponent implements OnInit {
       datasets: [
         {
           label: 'Total Deaths',
-          backgroundColor: '#42A5F5',
+          backgroundColor: '#b90608',
           borderColor: '#b90608',
           fill: false,
           data: this.totalDeathsChartDataSet

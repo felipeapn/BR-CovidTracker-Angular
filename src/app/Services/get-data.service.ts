@@ -3,13 +3,14 @@ import { CasosDiario } from './../Model/casos-diario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { take } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetDataService {
 
-  private readonly API = `http://localhost:8080/data`;
+  private readonly API = `${environment.API}data`;
 
   private filtroUrl: string;
 
